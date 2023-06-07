@@ -11,7 +11,7 @@ if (empty($existe) && $id_user != 1) {
 
 if (!empty($_POST)) {
     $alert = "";
-    if (empty($_POST['proveedor']) || empty($_POST['direccion'])) {
+    if (empty($_POST['proveedor']) || empty($_POST['direccion']) || empty($_POST['nombre']) || empty($_POST['telefono']) ) {
         $alert = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
                         Todo los campos son obligatorio
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -22,6 +22,8 @@ if (!empty($_POST)) {
         $id = $_POST['id'];
         $proveedor = $_POST['proveedor'];
         $direccion = $_POST['direccion'];
+        $nombre = $_POST['nombre'];
+        $telefono = $_POST['telefono'];
         $result = 0;
         if (empty($id)) {
             $query = mysqli_query($conexion, "SELECT * FROM proveedores WHERE proveedor = '$proveedor'");
@@ -34,7 +36,7 @@ if (!empty($_POST)) {
                         </button>
                     </div>';
             } else {
-                $query_insert = mysqli_query($conexion, "INSERT INTO proveedores(proveedor, direccion) values ('$proveedor', '$direccion')");
+                $query_insert = mysqli_query($conexion, "INSERT INTO proveedores(proveedor, direccion, nombre, telefono) values ('$proveedor', '$direccion', '$nombre', '$telefono')");
                 if ($query_insert) {
                     $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                     proveedor registrado
@@ -52,7 +54,7 @@ if (!empty($_POST)) {
                 }
             }
         } else {
-            $sql_update = mysqli_query($conexion, "UPDATE proveedores SET proveedor = '$proveedor', direccion = '$direccion' WHERE id = $id");
+            $sql_update = mysqli_query($conexion, "UPDATE proveedores SET proveedor = '$proveedor', direccion = '$direccion', nombre = '$nombre', telefono = '$telefono' WHERE id = $id");
             if ($sql_update) {
                 $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                 proveedor Modificado
@@ -83,7 +85,7 @@ include_once "includes/header.php";
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="proveedor" class="text-dark font-weight-bold">proveedor</label>
+                                <label for="proveedor" class="text-dark font-weight-bold">Proveedor</label>
                                 <input type="text" placeholder="Ingrese proveedor" name="proveedor" id="proveedor" class="form-control">
                                 <input type="hidden" name="id" id="id">
                             </div>
@@ -94,11 +96,23 @@ include_once "includes/header.php";
                                 <input type="text" placeholder="Ingrese Dirección" name="direccion" id="direccion" class="form-control">
                             </div>
                         </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="nombre" class="text-dark font-weight-bold">Nombre</label>
+                                <input type="text" placeholder="Ingrese nombre" name="nombre" id="nombre" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="telefono" class="text-dark font-weight-bold">Telefono</label>
+                                <input type="text" placeholder="Ingrese telefono" name="telefono" id="telefono" class="form-control">
+                            </div>
+                        </div>
                         <div class="col-md-4 mt-4">
                             <input type="submit" value="Registrar" class="btn btn-primary" id="btnAccion">
-                            <input type="button" value="Nuevo" class="btn btn-success" id="btnNuevo" onclick="limpiar()">
+                            <input type="button" value="Limpiar" class="btn btn-success" id="btnNuevo" onclick="limpiar()">
                         </div>
-                    </div>
+                    </div>  
                 </form>
             </div>
             <div class="col-md-12">
@@ -109,6 +123,8 @@ include_once "includes/header.php";
                                 <th>#</th>
                                 <th>proveedor</th>
                                 <th>Dirección</th>
+                                <th>Nombre</th>
+                                <th>Telefono</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -124,6 +140,8 @@ include_once "includes/header.php";
                                         <td><?php echo $data['id']; ?></td>
                                         <td><?php echo $data['proveedor']; ?></td>
                                         <td><?php echo $data['direccion']; ?></td>
+                                        <td><?php echo $data['nombre']; ?></td>
+                                        <td><?php echo $data['telefono']; ?></td>
                                         <td style="width: 200px;">
                                             <a href="#" onclick="editarLab(<?php echo $data['id']; ?>)" class="btn btn-primary"><i class='fas fa-edit'></i></a>
                                             <form action="eliminar_lab.php?id=<?php echo $data['id']; ?>" method="post" class="confirmar d-inline">

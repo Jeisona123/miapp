@@ -216,12 +216,12 @@ CREATE TABLE `proveedores` (
 -- Volcado de datos para la tabla `proveedores`
 --
 
-INSERT INTO `proveedores` (`id`, `proveedor`, `direccion`) VALUES
+INSERT INTO `proveedores` (`id`, `proveedor`, `direccion`, 'nombre', 'telefono') VALUES
 (5, 'gtrtg', 'gttt');
 
 -- --------------------------------------------------------
 
---
+--  
 -- Estructura de tabla para la tabla `tipos`
 --
 
