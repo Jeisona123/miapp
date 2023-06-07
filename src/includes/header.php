@@ -78,7 +78,7 @@ if (empty($_SESSION['active'])) {
                     <li class="nav-item">
                         <a class="nav-link d-flex" href="lista_ventas.php">
                             <i class="fas fa-cart-plus mr-2 fa-2x"></i>
-                            <p> Historial Ventas</p>
+                            <p> Historial de Ventas</p>
                         </a>
                     </li>
                 </ul>
