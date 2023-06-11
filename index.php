@@ -66,7 +66,7 @@ if (!empty($_SESSION['active'])) {
 							<div class="card">
 								<div class="card-header card-header-primary text-center">
 									<h4 class="card-title">Iniciar Sesión</h4>
-									<img class="img-thumbnail" src="assets/img/logo.png" width="260"/>
+									<img class="img-thumbnail" src="assets/img/Logos2.jpg" width="260"/>
 								</div>
 								<div class="card-body">
 									<?php echo isset($alert) ? $alert : ''; ?>
