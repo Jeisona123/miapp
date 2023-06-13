@@ -48,42 +48,41 @@ if (!empty($_SESSION['active'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Iniciar Sesión</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="assets/css/material-dashboard.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
+
+    <link rel="stylesheet" href="./assets/css/indexlogin.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
 </head>
 
-<body class="bg">
-    <div class="col-md-4 mx-auto">
-        <?php echo (isset($alert)) ? $alert : '' ; ?>
-							<div class="card">
-								<div class="card-header card-header-primary text-center">
-									<h4 class="card-title">Iniciar Sesión</h4>
-									<img class="img-thumbnail" src="assets/img/Logos2.jpg" width="260"/>
-								</div>
-								<div class="card-body">
-									<?php echo isset($alert) ? $alert : ''; ?>
-									<form action="" method="post" class="p-3">
-										<div class="form-group">
-											<input type="text" class="form-control form-control-lg text-center" id="exampleInputEmail1" placeholder="Usuario" name="usuario">
-										</div>
-										<div class="form-group">
-											<input type="password" class="form-control form-control-lg text-center" id="exampleInputPassword1" placeholder="Clave" name="clave">
-										</div>
-										<div class="mt-3">
-											<button class="btn btn-block btn-dark btn-lg font-weight-medium auth-form-btn" type="submit">Login</button>
-										</div>
+<body>
+    <div class="form">
 
-									</form>
-								</div>
-							</div>
+        <h2 class="title">INICIAR SESION</h2><br><br>
+        <div class="alert <?php echo isset($alert) ? 'show' : ''; ?>">
+            <?php echo isset($alert) ? $alert : ''; ?>
+        </div>
+
+        <br>
+        <form action="" method="post" class="p-3">
+            <div class="form-group">
+                <i class="fa-solid fa-user"></i>
+                <label>Usuario</label>
+                <input type="text" class="form-control form-control-lg text-center" id="exampleInputEmail1"
+                    placeholder="Usuario" name="usuario">
+            </div>
+            <div class="form-group">
+                <i class="fa-solid fa-unlock"></i>
+                <label>Clave</label>
+                <input type="password" class="form-control form-control-lg text-center" id="exampleInputPassword1"
+                    placeholder="Clave" name="clave">
+            </div>
+            <button class="botona" type="submit">Login</button>
+            <a class="otro" href="#">Crear Cuenta</a>
+
+        </form>
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->

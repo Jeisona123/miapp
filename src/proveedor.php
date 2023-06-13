@@ -11,7 +11,7 @@ if (empty($existe) && $id_user != 1) {
 
 if (!empty($_POST)) {
     $alert = "";
-    if (empty($_POST['proveedor']) || empty($_POST['direccion']) || empty($_POST['nombre']) || empty($_POST['telefono']) ) {
+    if (empty($_POST['proveedor']) || empty($_POST['direccion']) || empty($_POST['nombre']) || empty($_POST['Telefono']) ) {
         $alert = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
                         Todo los campos son obligatorio
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -23,11 +23,11 @@ if (!empty($_POST)) {
         $proveedor = $_POST['proveedor'];
         $direccion = $_POST['direccion'];
         $nombre = $_POST['nombre'];
-        $telefono = $_POST['telefono'];
+        $Telefono = $_POST['Telefono'];
         $result = 0;
         if (empty($id)) {
             $query = mysqli_query($conexion, "SELECT * FROM proveedores WHERE proveedor = '$proveedor'");
-            $result = mysqli_fetch_array($query);
+            $result = mysqli_num_rows($query);
             if ($result > 0) {
                 $alert = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
                         El proveedor ya existe
@@ -36,7 +36,7 @@ if (!empty($_POST)) {
                         </button>
                     </div>';
             } else {
-                $query_insert = mysqli_query($conexion, "INSERT INTO proveedores(proveedor, direccion, nombre, telefono) values ('$proveedor', '$direccion', '$nombre', '$telefono')");
+                $query_insert = mysqli_query($conexion, "INSERT INTO proveedores(proveedor, direccion, nombre, Telefono) values ('$proveedor', '$direccion', '$nombre', '$Telefono')");
                 if ($query_insert) {
                     $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                     proveedor registrado
@@ -54,7 +54,7 @@ if (!empty($_POST)) {
                 }
             }
         } else {
-            $sql_update = mysqli_query($conexion, "UPDATE proveedores SET proveedor = '$proveedor', direccion = '$direccion', nombre = '$nombre', telefono = '$telefono' WHERE id = $id");
+            $sql_update = mysqli_query($conexion, "UPDATE proveedores SET proveedor = '$proveedor', direccion = '$direccion', nombre = '$nombre', Telefono = '$Telefono' WHERE id = $id");
             if ($sql_update) {
                 $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                 proveedor Modificado
@@ -104,8 +104,8 @@ include_once "includes/header.php";
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="telefono" class="text-dark font-weight-bold">Telefono</label>
-                                <input type="text" placeholder="Ingrese telefono" name="telefono" id="telefono" class="form-control">
+                                <label for="Telefono" class="text-dark font-weight-bold">Telefono</label>
+                                <input type="text" placeholder="Ingrese Telefono" name="Telefono" id="Telefono" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-4 mt-4">
@@ -141,7 +141,7 @@ include_once "includes/header.php";
                                         <td><?php echo $data['proveedor']; ?></td>
                                         <td><?php echo $data['direccion']; ?></td>
                                         <td><?php echo $data['nombre']; ?></td>
-                                        <td><?php echo $data['telefono']; ?></td>
+                                        <td><?php echo $data['Telefono']; ?></td>
                                         <td style="width: 200px;">
                                             <a href="#" onclick="editarLab(<?php echo $data['id']; ?>)" class="btn btn-primary"><i class='fas fa-edit'></i></a>
                                             <form action="eliminar_lab.php?id=<?php echo $data['id']; ?>" method="post" class="confirmar d-inline">

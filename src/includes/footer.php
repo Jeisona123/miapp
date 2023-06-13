@@ -17,13 +17,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title">Cambiar contraseña</h5>
+                <h4 class="modal-title">Cambiar Contraseña</h4>
                 <button class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form method="post" id="frmPass">
+                    
                     <div class="form-group">
                         <label for="actual"><i class="fas fa-key"></i> Contraseña Actual</label>
                         <input id="actual" class="form-control" type="password" name="actual" placeholder="Contraseña actual" required>

@@ -1,0 +1,106 @@
+body{
+    background-color: #101A55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
+}
+/*ESTILO FORMULARIO*/
+.form{
+    width: 500px;
+    border: 2px solid #928392;
+    padding: 5rem;
+    background-color: #ffffff8f;
+    border: none;
+    border-radius: 20px;
+    color: #101A55;
+}
+/*ESTILO TITULO DEL FORULARIO*/
+.title{
+    display: block;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+}
+/*ESTILO NOMBRE DEL CAMPO*/
+label{
+    color: #101A55;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 300;
+}
+/*ESTILO CAMPO PARA DIGITAR*/
+input{
+    display: block;
+    border: 2px solid #111;
+    width: 90%;
+    padding: 10px;
+    margin: 14px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+/*ESTILO BOTON INICIAR SESION*/
+.botona{
+    float: right;
+    background-color: rgb(16, 0, 236);
+    padding: .5rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    width: 40%;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.botona:hover{
+    background-color: rgb(255, 238, 0);
+    color: rgb(0, 0, 0);
+}
+/*ESTILO ENLACE CREAR CUENTA*/
+.otro{
+    float: left;
+    margin-left: 10px;
+    padding: .5rem;
+    text-decoration: none;
+    color: #101A55;
+    
+}
+.otro:hover{
+    color: #ffffff;
+}
+
+/*ESTILO PARA MENSAJE DE ALERTA*/
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+  .alert.show {
+    display: block;
+  }
+  
+  .alert.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .alert.warning {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  

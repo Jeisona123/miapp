@@ -244,16 +244,18 @@ INSERT INTO `producto` (`codproducto`, `codigo`, `descripcion`, `precio`, `exist
 CREATE TABLE `proveedores` (
   `id` int(11) NOT NULL,
   `proveedor` varchar(100) NOT NULL,
-  `direccion` varchar(50) NOT NULL
+  `direccion` varchar(50) NOT NULL,
+      'nombre' varchar(100) NOT NULL,
+    'Telefono' INT(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `proveedores`
 --
 
-INSERT INTO `proveedores` (`id`, `proveedor`, `direccion`) VALUES
-(7, 'juan', 'Cra. 19 #18sur-51'),
-(8, 'alpina', 'calle13 # 2 14');
+INSERT INTO `proveedores` (`id`, `proveedor`, `direccion`,'nombre','Telefono') VALUES
+(7,'Icom','Cra. 19 #18sur-51','Juan Hernandez',3213456576),(8,'Genfar','calle13 # 2 14','Carlos Sanchez',3214536287);
+ 
 
 -- --------------------------------------------------------
 

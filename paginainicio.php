@@ -315,7 +315,7 @@
 
     <section id="contactenos">
       <div class="containerq1">
-        <h1 class="textoa">CONTACTENOS</h1>
+        <h1 class="textoa">CONTACTENOS</h1><hr>
         <div class="row">
 
           <div class="cont2">

@@ -254,7 +254,7 @@
     `proveedor` varchar(100) NOT NULL,
     `direccion` varchar(50) NOT NULL,
     'nombre' varchar(100) NOT NULL;
-    'telefono' INT(10) NOT NULL;
+    'Telefono' INT(10) NOT NULL;
     PRIMARY KEY (`id`)
   ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
   /*!40101 SET character_set_client = @saved_cs_client */;
@@ -265,7 +265,7 @@
 
   LOCK TABLES `proveedores` WRITE;
   /*!40000 ALTER TABLE `proveedores` DISABLE KEYS */;
-  INSERT INTO `proveedores` VALUES (7,'juan','Cra. 19 #18sur-51'),(8,'alpina','calle13 # 2 14');
+  INSERT INTO `proveedores` VALUES (7,'Icom','Cra. 19 #18sur-51','Juan Hernandez',3213456576),(8,'Genfar','calle13 # 2 14','Carlos Sanchez',3214536287);
   /*!40000 ALTER TABLE `proveedores` ENABLE KEYS */;
   UNLOCK TABLES;
 

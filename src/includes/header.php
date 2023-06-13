@@ -89,7 +89,7 @@ if (empty($_SESSION['active'])) {
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
-                        <a class="navbar-brand" href="javascript:;">Veterinaria Colfarma</a>
+                        <a class="navbar-brand" href="javascript:;"> DROMEDIC JC</a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>
@@ -108,7 +108,7 @@ if (empty($_SESSION['active'])) {
                                     </p>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#nuevo_pass">Perfil</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#nuevo_pass">Contraseña</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="salir.php">Cerrar Sesión</a>
                                 </div>
