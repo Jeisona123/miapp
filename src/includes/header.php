@@ -21,7 +21,7 @@ if (empty($_SESSION['active'])) {
 
 <body>
     <div class="wrapper ">
-        <div class="sidebar" data-color="purple" data-background-color="blue" data-image="../assets/img/sidebar.jpg">
+        <div class="sidebar" data-color="purple" data-background-color="blue" data-image="../assets/img/drogueria4.jpeg">
             <div class="logo bg-primary"><a href="./" class="simple-text logo-normal">
                     DROMEDIC JC
                 </a></div>
