@@ -322,7 +322,7 @@
 
 <br>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0495159596812!2d-74.10454858545287!3d4.585134496668906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f98dfab1caac9%3A0xb999a9e45c6b412f!2sPlaza%20Mercado%20Restrepo!5e0!3m2!1ses!2sco!4v1653764811626!5m2!1ses!2sco"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.08511333497!2d-73.35124212589008!3d5.554400733667589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a7c14df6c156f%3A0x37b0ba2b515fb8a3!2zQ2wuIDQ3ICMzLCBUdW5qYSwgQm95YWPDoQ!5e0!3m2!1ses!2sco!4v1686862340219!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
 

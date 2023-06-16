@@ -102,6 +102,7 @@ include_once "includes/header.php";
                                         <input type="text" placeholder="Ingrese nombre del producto" name="producto" id="producto" class="form-control">
                                     </div>
                                 </div>
+
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="precio" class=" text-dark font-weight-bold">Precio</label>
@@ -116,7 +117,7 @@ include_once "includes/header.php";
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="tipo">Tipo</label>
+                                        <label for="tipo">Laboratorio</label>
                                         <select id="tipo" class="form-control" name="tipo" required>
                                             <?php
                                             $query_tipo = mysqli_query($conexion, "SELECT * FROM tipos");
@@ -176,7 +177,7 @@ include_once "includes/header.php";
                             <th>#</th>
                             <th>Código</th>
                             <th>Producto</th>
-                            <th>Tipo</th>
+                            <th>Laboratorio</th>
                             <th>Categoria</th>
                             <th>Precio</th>
                             <th>Vencimiento</th>

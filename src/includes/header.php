@@ -21,8 +21,8 @@ if (empty($_SESSION['active'])) {
 
 <body>
     <div class="wrapper ">
-        <div class="sidebar" data-color="purple" data-background-color="blue" data-image="../assets/img/drogueria4.jpeg">
-            <div class="logo bg-primary"><a href="./" class="simple-text logo-normal">
+        <div class="sidebar" data-color="purple" data-background-color="blue" data-image="../assets/img/drogueria4.jpeg" >
+            <div class="logo bg-primary"><a href="#" class="simple-text logo-normal" style="font-size: 22px;" >
                     DROMEDIC JC
                 </a></div>
             <div class="sidebar-wrapper">
@@ -42,7 +42,7 @@ if (empty($_SESSION['active'])) {
                     <li class="nav-item">
                         <a class="nav-link d-flex" href="tipo.php">
                             <i class=" fas fa-tags mr-2 fa-2x"></i>
-                            <p> Tipos</p>
+                            <p> Laboratorio</p>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -64,19 +64,19 @@ if (empty($_SESSION['active'])) {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex" href="clientes.php">
+                        <a class="nav-link d-flex" href="#">
                             <i class=" fas fa-users mr-2 fa-2x"></i>
                             <p> Clientes</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex" href="ventas.php">
+                        <a class="nav-link d-flex" href="#">
                             <i class="fas fa-cash-register mr-2 fa-2x"></i>
                             <p> Nueva Venta</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex" href="lista_ventas.php">
+                        <a class="nav-link d-flex" href="#">
                             <i class="fas fa-cart-plus mr-2 fa-2x"></i>
                             <p> Historial de Ventas</p>
                         </a>
@@ -89,7 +89,7 @@ if (empty($_SESSION['active'])) {
             <nav class="navbar navbar-expand-lg navbar-absolute fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
-                        <a class="navbar-brand" href="javascript:;"> DROMEDIC JC</a>
+                        <center><a class="navbar-brand" href="javascript:;"></a></center>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>

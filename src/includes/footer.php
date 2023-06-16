@@ -7,7 +7,7 @@
             <script>
                 document.write(new Date().getFullYear())
             </script>
-            <a href="#" target="_blank">V&M</a>.
+            <a href="#" target="_blank">D&D</a>.
         </div>
     </div>
 </footer>
