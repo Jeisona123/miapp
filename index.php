@@ -80,7 +80,7 @@ if (!empty($_SESSION['active'])) {
                     placeholder="Clave" name="clave">
             </div>
             <button class="botona" type="submit">Login</button>
-            <a class="otro" href="#">Crear Cuenta</a>
+            <a class="otro" href="registro.php">Crear Cuenta</a>
 
         </form>
     </div>

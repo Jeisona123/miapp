@@ -61,7 +61,7 @@ if (!empty($_POST)) {
                 }
             }
         } else {
-            $query_update = mysqli_query($conexion, "UPDATE producto SET codigo = '$codigo', descripcion = '$producto', precio= $precio, existencia = $cantidad, fechahoy = '$fechahoy', vencimiento = '$vencimiento', reginv ='$reginv', nolote = '$nolote', dosis = '$dosis', funcion = '$funcion' WHERE codproducto = $id'");
+            $query_update = mysqli_query($conexion, "UPDATE producto SET codigo = '$codigo', descripcion = '$producto', precio= $precio, existencia = $cantidad, fechahoy = '$fechahoy', vencimiento = '$vencimiento', reginv ='$reginv', nolote = '$nolote', dosis = '$dosis', funcion = '$funcion' WHERE codproducto = '" . mysqli_real_escape_string($conexion, $id) . "'");
             if ($query_update) {
                 $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Producto Modificado
