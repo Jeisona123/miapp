@@ -21,9 +21,12 @@ if (!empty($_POST)) {
     } else {
         $id = $_POST['id'];
         $nombre = $_POST['nombre'];
+        $apellido = $_POST['apellido'];
         $telefono = $_POST['telefono'];
         $direccion = $_POST['direccion'];
-        $result = 0;
+        
+
+        $result = 0;    
         if (empty($id)) {
             $query = mysqli_query($conexion, "SELECT * FROM cliente WHERE nombre = '$nombre'");
             $result = mysqli_fetch_array($query);
@@ -35,7 +38,7 @@ if (!empty($_POST)) {
                         </button>
                     </div>';
             } else {
-                $query_insert = mysqli_query($conexion, "INSERT INTO cliente(nombre,telefono,direccion) values ('$nombre', '$telefono', '$direccion')");
+                $query_insert = mysqli_query($conexion, "INSERT INTO cliente(nombre,telefono,direccion,apellido) values ('$nombre', '$apellido, '$telefono', '$direccion')");
                 if ($query_insert) {
                     $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Cliente registrado
@@ -53,7 +56,7 @@ if (!empty($_POST)) {
                 }
             }
         }else{
-            $sql_update = mysqli_query($conexion, "UPDATE cliente SET nombre = '$nombre' , telefono = '$telefono', direccion = '$direccion' WHERE idcliente = $id");
+            $sql_update = mysqli_query($conexion, "UPDATE cliente SET nombre = '$nombre', apellido = '$apellido' , telefono = '$telefono', direccion = '$direccion' WHERE idcliente = $id");
             if ($sql_update) {
                 $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Cliente Modificado
@@ -88,6 +91,12 @@ include_once "includes/header.php";
                                 <input type="text" placeholder="Ingrese Nombre" name="nombre" id="nombre" class="form-control">
                             </div>
                         </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="apellido" class="text-dark font-weight-bold">Apellido</label>
+                                <input type="text" placeholder="Ingrese apellido" name="apellido" id="apellido" class="form-control">
+                            </div>
+                        </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for="telefono" class="text-dark font-weight-bold">Teléfono</label>
@@ -101,6 +110,7 @@ include_once "includes/header.php";
                                 <input type="text" placeholder="Ingrese Direccion" name="direccion" id="direccion" class="form-control">
                             </div>
                         </div>
+                        
                         <div class="col-md-4 mt-3">
                             <input type="submit" value="Registrar" class="btn btn-primary" id="btnAccion">
                             <input type="button" value="Nuevo" class="btn btn-success" id="btnNuevo" onclick="limpiar()">
@@ -115,6 +125,7 @@ include_once "includes/header.php";
                             <tr>
                                 <th>#</th>
                                 <th>Nombre</th>
+                                <th>Apellido</th>
                                 <th>Teléfono</th>
                                 <th>Dirección</th>
                                 <th></th>
@@ -131,8 +142,10 @@ include_once "includes/header.php";
                                     <tr>
                                         <td><?php echo $data['idcliente']; ?></td>
                                         <td><?php echo $data['nombre']; ?></td>
+                                        <td><?php echo $data['apellido']; ?></td>
                                         <td><?php echo $data['telefono']; ?></td>
                                         <td><?php echo $data['direccion']; ?></td>
+                                        
                                         <td>
                                             <a href="#" onclick="editarCliente(<?php echo $data['idcliente']; ?>)" class="btn btn-primary"><i class='fas fa-edit'></i></a>
                                             <form action="eliminar_cliente.php?id=<?php echo $data['idcliente']; ?>" method="post" class="confirmar d-inline">

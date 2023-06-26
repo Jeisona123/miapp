@@ -21,7 +21,7 @@ if (empty($_SESSION['active'])) {
 
 <body>
     <div class="wrapper ">
-        <div class="sidebar" data-color="purple" data-background-color="blue" data-image="../assets/img/drogueria4.jpeg" >
+        <div class="sidebar" data-color="purple" data-background-color="blue" data-image="../assets/img/drofondo.avif" style="backdrop-filter: blur(2px);">
             <div class="logo bg-primary"><a href="#" class="simple-text logo-normal" style="font-size: 22px;" >
                     DROMEDIC JC
                 </a></div>
@@ -64,19 +64,19 @@ if (empty($_SESSION['active'])) {
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex" href="#">
+                        <a class="nav-link d-flex" href="clientes.php">
                             <i class=" fas fa-users mr-2 fa-2x"></i>
                             <p> Clientes</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex" href="#">
+                        <a class="nav-link d-flex" href="ventas.php">
                             <i class="fas fa-cash-register mr-2 fa-2x"></i>
                             <p> Nueva Venta</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link d-flex" href="#">
+                        <a class="nav-link d-flex" href="lista_ventas.php">
                             <i class="fas fa-cart-plus mr-2 fa-2x"></i>
                             <p> Historial de Ventas</p>
                         </a>

@@ -18,11 +18,16 @@ if (!empty($_POST)) {
     $tipo = $_POST['tipo'];
     $categoria = $_POST['categoria'];
     $proveedor = $_POST['proveedor'];
+    $fechahoy = $_POST['fechahoy'];
     $vencimiento = $_POST['vencimiento'];
+    $reginv = $_POST['reginv'];
+    $nolote = $_POST['nolote'];
+    $dosis = $_POST['dosis'];
+    $funcion = $_POST['funcion'];
     if (!empty($_POST['accion'])) {
         $vencimiento = $_POST['vencimiento'];
     }
-    if (empty($codigo) || empty($producto) || empty($tipo) || empty($categoria) || empty($proveedor)  || empty($precio) || $precio <  0 || empty($cantidad) || $cantidad <  0 || empty($vencimiento)) {
+    if (empty($codigo) || empty($producto) || empty($tipo) || empty($categoria) || empty($proveedor) || empty($precio) || $precio < 0 || empty($cantidad) || $cantidad < 0 || empty($vencimiento) || empty($reginv) || empty($nolote) || empty($dosis) || empty($funcion)) {
         $alert = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
                         Todo los campos son obligatorios
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -41,7 +46,7 @@ if (!empty($_POST)) {
                         </button>
                     </div>';
             } else {
-                $query_insert = mysqli_query($conexion, "INSERT INTO producto(codigo,descripcion,precio,existencia,id_lab,id_presentacion,id_tipo, vencimiento) values ('$codigo', '$producto', '$precio', '$cantidad', $proveedor, $categoria, $tipo, '$vencimiento')");
+                $query_insert = mysqli_query($conexion, "INSERT INTO producto(codigo,descripcion,precio,existencia,id_lab,id_presentacion,id_tipo,fechahoy,vencimiento,reginv,nolote,dosis,funcion ) values ('$codigo', '$producto', '$precio', '$cantidad', $proveedor, $categoria, $tipo,'$fechahoy', '$vencimiento', '$reginv', '$nolote', '$dosis', '$funcion')");
                 if ($query_insert) {
                     $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Producto registrado
@@ -56,7 +61,7 @@ if (!empty($_POST)) {
                 }
             }
         } else {
-            $query_update = mysqli_query($conexion, "UPDATE producto SET codigo = '$codigo', descripcion = '$producto', precio= $precio, existencia = $cantidad, vencimiento = '$vencimiento' WHERE codproducto = $id");
+            $query_update = mysqli_query($conexion, "UPDATE producto SET codigo = '$codigo', descripcion = '$producto', precio= $precio, existencia = $cantidad, fechahoy = '$fechahoy', vencimiento = '$vencimiento', reginv ='$reginv', nolote = '$nolote', dosis = '$dosis', funcion = '$funcion' WHERE codproducto = $id'");
             if ($query_update) {
                 $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Producto Modificado
@@ -91,76 +96,120 @@ include_once "includes/header.php";
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="codigo" class=" text-dark font-weight-bold"><i class="fas fa-barcode"></i> Código de Barras</label>
-                                        <input type="text" placeholder="Ingrese código de barras" name="codigo" id="codigo" class="form-control">
+                                        <label for="codigo" class=" text-dark font-weight-bold"><i
+                                                class="fas fa-barcode"></i> Código de Barras</label>
+                                        <input type="text" placeholder="Ingrese código de barras" name="codigo"
+                                            id="codigo" class="form-control">
                                         <input type="hidden" id="id" name="id">
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label for="producto" class=" text-dark font-weight-bold">Producto</label>
-                                        <input type="text" placeholder="Ingrese nombre del producto" name="producto" id="producto" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="precio" class=" text-dark font-weight-bold">Precio</label>
-                                        <input type="text" placeholder="Ingrese precio" class="form-control" name="precio" id="precio">
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="cantidad" class=" text-dark font-weight-bold">Cantidad</label>
-                                        <input type="number" placeholder="Ingrese cantidad" class="form-control" name="cantidad" id="cantidad">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="tipo">Laboratorio</label>
+                                        <label for="producto" class=" text-dark font-weight-bold">Producto</label>
+                                        <input type="text" placeholder="Ingrese nombre" name="producto" id="producto"
+                                            class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="precio" class=" text-dark font-weight-bold">Precio</label>
+                                        <input type="text" placeholder="Ingrese precio" class="form-control"
+                                            name="precio" id="precio">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="cantidad" class=" text-dark font-weight-bold">Cantidad</label>
+                                        <input type="number" placeholder="Ingrese cantidad" class="form-control"
+                                            name="cantidad" id="cantidad">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="tipo" class=" text-dark font-weight-bold">Laboratorio</label>
                                         <select id="tipo" class="form-control" name="tipo" required>
                                             <?php
                                             $query_tipo = mysqli_query($conexion, "SELECT * FROM tipos");
                                             while ($datos = mysqli_fetch_assoc($query_tipo)) { ?>
-                                                <option value="<?php echo $datos['id'] ?>"><?php echo $datos['tipo'] ?></option>
+                                                <option value="<?php echo $datos['id'] ?>"><?php echo $datos['tipo'] ?>
+                                                </option>
                                             <?php } ?>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="categoria">Categoria</label>
+                                        <label for="categoria" class=" text-dark font-weight-bold">Categoria</label>
                                         <select id="categoria" class="form-control" name="categoria" required>
                                             <?php
                                             $query_pre = mysqli_query($conexion, "SELECT * FROM categoria");
                                             while ($datos = mysqli_fetch_assoc($query_pre)) { ?>
-                                                <option value="<?php echo $datos['id'] ?>"><?php echo $datos['nombre'] ?></option>
+                                                <option value="<?php echo $datos['id'] ?>"><?php echo $datos['nombre'] ?>
+                                                </option>
                                             <?php } ?>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="proveedor">Proveedor</label>
+                                        <label for="proveedor" class=" text-dark font-weight-bold">Proveedor</label>
                                         <select id="proveedor" class="form-control" name="proveedor" required>
                                             <?php
                                             $query_lab = mysqli_query($conexion, "SELECT * FROM proveedores");
                                             while ($datos = mysqli_fetch_assoc($query_lab)) { ?>
-                                                <option value="<?php echo $datos['id'] ?>"><?php echo $datos['proveedor'] ?></option>
+                                                <option value="<?php echo $datos['id'] ?>"><?php echo $datos['proveedor'] ?>
+                                                </option>
                                             <?php } ?>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <input id="accion" class="form-check-input" type="checkbox" name="accion" value="si">
-                                        <label for="vencimiento">Vencimiento</label>
+                                        <label for="fechahoy" class=" text-dark font-weight-bold">Fecha Creacion</label>
+                                        <input type="date" placeholder="Ingrese Fecha" class="form-control"
+                                            name="fechahoy" id="fechahoy">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+
+                                        <label for="vencimiento" class=" text-dark font-weight-bold">Vencimiento</label>
                                         <input id="vencimiento" class="form-control" type="date" name="vencimiento">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="reginv" class=" text-dark font-weight-bold">Registro Invima</label>
+                                        <input type="text" placeholder="Ingrese Registro Invima" class="form-control"
+                                            name="reginv" id="reginv">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="nolote" class=" text-dark font-weight-bold">No. Lote</label>
+                                        <input type="text" placeholder="Ingrese No. Lote" class="form-control"
+                                            name="nolote" id="nolote">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="dosis" class=" text-dark font-weight-bold">Dosificacion</label>
+                                        <input type="text" placeholder="Ingrese Dosificacion" class="form-control"
+                                            name="dosis" id="dosis">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="funcion" class=" text-dark font-weight-bold">Para que Sirve</label>
+                                        <input type="text" placeholder="Ingrese Funcionalidad" class="form-control"
+                                            name="funcion" id="funcion">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <input type="submit" value="Registrar" class="btn btn-primary" id="btnAccion">
-                                    <input type="button" value="Nuevo" onclick="limpiar()" class="btn btn-success" id="btnNuevo">
+                                    <input type="button" value="Nuevo" onclick="limpiar()" class="btn btn-success"
+                                        id="btnNuevo">
                                 </div>
                             </div>
 
@@ -180,7 +229,12 @@ include_once "includes/header.php";
                             <th>Laboratorio</th>
                             <th>Categoria</th>
                             <th>Precio</th>
+                            <th>Fecha Creacion</th>
                             <th>Vencimiento</th>
+                            <th>Reg. Invima</th>
+                            <th>No. Lote</th>
+                            <th>Dosificacion</th>
+                            <th>Para que sirve</th>
                             <th>Stock</th>
                             <th></th>
                         </tr>
@@ -194,23 +248,57 @@ include_once "includes/header.php";
                         if ($result > 0) {
                             while ($data = mysqli_fetch_assoc($query)) { ?>
                                 <tr>
-                                    <td><?php echo $data['codproducto']; ?></td>
-                                    <td><?php echo $data['codigo']; ?></td>
-                                    <td><?php echo $data['descripcion']; ?></td>
-                                    <td><?php echo $data['tipo']; ?></td>
-                                    <td><?php echo $data['nombre']; ?></td>
-                                    <td><?php echo $data['precio']; ?></td>
-                                    <td><?php echo $data['vencimiento']; ?></td>
-                                    <td><?php echo $data['existencia']; ?></td>
                                     <td>
-                                        <a href="#" onclick="editarProducto(<?php echo $data['codproducto']; ?>)" class="btn btn-primary"><i class='fas fa-edit'></i></a>
+                                        <?php echo $data['codproducto']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['codigo']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['descripcion']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['tipo']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['nombre']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['precio']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['fechahoy']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['vencimiento']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['reginv']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['nolote']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['dosis']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['funcion']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $data['existencia']; ?>
+                                    </td>
+                                    <td>
+                                        <a href="#" onclick="editarProducto(<?php echo $data['codproducto']; ?>)"
+                                            class="btn btn-primary"><i class='fas fa-edit'></i></a>
 
-                                        <form action="eliminar_producto.php?id=<?php echo $data['codproducto']; ?>" method="post" class="confirmar d-inline">
-                                            <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i> </button>
+                                        <form action="eliminar_producto.php?id=<?php echo $data['codproducto']; ?>"
+                                            method="post" class="confirmar d-inline">
+                                            <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i>
+                                            </button>
                                         </form>
                                     </td>
                                 </tr>
-                        <?php }
+                            <?php }
                         } ?>
                     </tbody>
 

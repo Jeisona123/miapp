@@ -76,6 +76,27 @@ if (!empty($_POST)) {
 }
 include_once "includes/header.php";
 ?>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+
+
+  <link rel="stylesheet" href="./assets/css/proveedor.css">
+  <script src="https://kit.fontawesome.com/b23ecab4a9.js" crossorigin="anonymous"></script>
+
+
+
+  <title>INICIO</title>
+</head>
+
+<body>
+
 <div class="card">
     <div class="card-body">
         <div class="row">
@@ -159,4 +180,7 @@ include_once "includes/header.php";
         </div>
     </div>
 </div>
+</body>
+
+</html>
 <?php include_once "includes/footer.php"; ?>

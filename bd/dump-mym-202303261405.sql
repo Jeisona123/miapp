@@ -1,6 +1,6 @@
   -- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
   --
-  -- Host: localhost    Database: mym
+  -- Host: localhost    Database: miapp
   -- ------------------------------------------------------
   -- Server version	5.5.5-10.4.27-MariaDB
 
@@ -352,7 +352,7 @@
   UNLOCK TABLES;
 
   --
-  -- Dumping routines for database 'mym'
+  -- Dumping routines for database 'miapp'
   --
   /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
