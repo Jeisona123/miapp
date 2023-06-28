@@ -90,7 +90,7 @@ include "includes/header.php";
             <div class="row">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="nombre">Nombre</label>
+                        <label for="nombre" class=" text-dark font-weight-bold">Nombre</label>
                         <input type="text" class="form-control" placeholder="Ingrese Nombre" name="nombre" id="nombre">
                         <input type="hidden" id="id" name="id">
                     </div>
@@ -98,21 +98,21 @@ include "includes/header.php";
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="correo">Correo</label>
+                        <label for="correo" class=" text-dark font-weight-bold">Correo</label>
                         <input type="email" class="form-control" placeholder="Ingrese Correo Electrónico" name="correo" id="correo">
                     </div>
 
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="usuario">Usuario</label>
+                        <label for="usuario" class=" text-dark font-weight-bold">Usuario</label>
                         <input type="text" class="form-control" placeholder="Ingrese Usuario" name="usuario" id="usuario">
                     </div>
 
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="clave">Contraseña</label>
+                        <label for="clave" class=" text-dark font-weight-bold">Contraseña</label>
                         <input type="password" class="form-control" placeholder="Ingrese Contraseña" name="clave" id="clave">
                     </div>
                 </div>

@@ -197,7 +197,7 @@ CREATE TABLE `producto` (
   `codigo` varchar(20) NOT NULL,
   `descripcion` varchar(200) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
-  `existencia` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
   `id_lab` int(11) NOT NULL,
   `id_presentacion` int(11) NOT NULL,
   `id_tipo` int(11) NOT NULL,
@@ -208,7 +208,7 @@ CREATE TABLE `producto` (
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`codproducto`, `codigo`, `descripcion`, `precio`, `existencia`, `id_lab`, `id_presentacion`, `id_tipo`, `vencimiento`) VALUES
+INSERT INTO `producto` (`codproducto`, `codigo`, `descripcion`, `precio`, `cantidad`, `id_lab`, `id_presentacion`, `id_tipo`, `vencimiento`) VALUES
 (1, '12345', 'aroz', '10000.00', -49, 4, 1, 2, '2023-03-21');
 
 -- --------------------------------------------------------

@@ -220,7 +220,7 @@ CREATE TABLE `producto` (
   `codigo` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `descripcion` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
   `precio` decimal(10,2) NOT NULL,
-  `existencia` int(11) NOT NULL,
+  `cantidad` int(11) NOT NULL,
   `id_lab` int(11) NOT NULL,
   `id_presentacion` int(11) NOT NULL,
   `id_tipo` int(11) NOT NULL,
@@ -231,7 +231,7 @@ CREATE TABLE `producto` (
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`codproducto`, `codigo`, `descripcion`, `precio`, `existencia`, `id_lab`, `id_presentacion`, `id_tipo`, `vencimiento`) VALUES
+INSERT INTO `producto` (`codproducto`, `codigo`, `descripcion`, `precio`, `cantidad`, `id_lab`, `id_presentacion`, `id_tipo`, `vencimiento`) VALUES
 (10, '12345', 'Yogurt', '2000.00', 5, 7, 8, 8, '2023-11-05'),
 (11, '1234', 'Leche', '4000.00', 11, 7, 6, 8, '2023-04-08');
 

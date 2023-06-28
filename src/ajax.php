@@ -24,7 +24,7 @@ if (isset($_GET['q'])) {
         $data['label'] = $row['codigo'] . ' - ' .$row['descripcion'];
         $data['value'] = $row['descripcion'];
         $data['precio'] = $row['precio'];
-        $data['existencia'] = $row['existencia'];
+        $data['cantidad'] = $row['cantidad'];
         array_push($datos, $data);
     }
     echo json_encode($datos);
@@ -75,8 +75,8 @@ if (isset($_GET['q'])) {
             $insertarDet = mysqli_query($conexion, "INSERT INTO detalle_venta (id_producto, id_venta, cantidad, precio, descuento, total) VALUES ($id_producto, $ultimoId, $cantidad, '$precio', '$desc', '$total')");
             $stockActual = mysqli_query($conexion, "SELECT * FROM producto WHERE codproducto = $id_producto");
             $stockNuevo = mysqli_fetch_assoc($stockActual);
-            $stockTotal = $stockNuevo['existencia'] - $cantidad;
-            $stock = mysqli_query($conexion, "UPDATE producto SET existencia = $stockTotal WHERE codproducto = $id_producto");
+            $stockTotal = $stockNuevo['cantidad'] - $cantidad;
+            $stock = mysqli_query($conexion, "UPDATE producto SET cantidad = $stockTotal WHERE codproducto = $id_producto");
         } 
         if ($insertarDet) {
             $eliminar = mysqli_query($conexion, "DELETE FROM detalle_temp WHERE id_usuario = $id_user");

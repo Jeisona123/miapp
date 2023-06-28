@@ -15,6 +15,8 @@
 
 
   <title>INICIO</title>
+
+
 </head>
 
 <body>
@@ -123,11 +125,9 @@
           <br>
           <div class="info-card">
             <h4> Acido Acetilsalicilico</h4>
-            <p> Aplican Descuentos</p>
+            
             <img src="./assets/img/estrellas.png" style="width: 150px;">
-            <p class="precio">$30.000<span class="u-pull-right">$1.800</span></p>
-            <a href="./catalogo.php" class="u-full-width button-primary button input agregar-carrito" data-id="1">Ver
-              mas</a>
+            <p>El ácido acetilsalicílico ayuda a lograr que haya mayor flujo de sangre a las piernas. Puede usarse para tratar un ataque cardíaco y prevenir coágulos de sangre cuando usted tenga un ritmo cardíaco anormal</p>
           </div>
         </div>
 
@@ -138,11 +138,9 @@
           <br>
           <div class="info-card">
             <h4> Cetirizina 1%</h4>
-            <p> Aplican Descuentos</p>
+            
             <img src="./assets/img/estrellas.png" style="width: 150px;">
-            <p class="precio">$22.000<span class="u-pull-right">$7.800</span></p>
-            <a href="./catalogo.php" class="u-full-width button-primary button input agregar-carrito" data-id="1">Ver
-              mas</a>
+            <p>La cetirizina es un fármaco utilizado para el tratamiento de la alergia. Es un antihistamínico considerado de segunda generación por no provocar somnolencia</p>
           </div>
         </div>
 
@@ -152,11 +150,9 @@
           <br>
           <div class="info-card">
             <h4> Loratadina 10mg</h4>
-            <p> Aplican Descuentos</p>
+           
             <img src="./assets/img/estrellas.png" style="width: 150px;">
-            <p class="precio">$10.000<span class="u-pull-right">$1.800</span></p>
-            <a href="./catalogo.php" class="u-full-width button-primary button input agregar-carrito" data-id="1">Ver
-              mas</a>
+            <p>La Loratadina es un fármaco utilizado para el tratamiento de la alergia. Es un antihistamínico considerado de segunda generación por no provocar somnolencia</p>
           </div>
         </div>
       </div>
@@ -167,11 +163,9 @@
           <br>
           <div class="info-card">
             <h4> Cetirizina 1%</h4>
-            <p> Aplican Descuentos</p>
+          
             <img src="./assets/img/estrellas.png" style="width: 150px;">
-            <p class="precio">$50.000<span class="u-pull-right">$11.800</span></p>
-            <a href="./catalogo.php" class="u-full-width button-primary button input agregar-carrito" data-id="1">Ver
-              mas</a>
+            <p>La cetirizina es un fármaco utilizado para el tratamiento de la alergia. Es un antihistamínico considerado de segunda generación por no provocar somnolencia</p>
           </div>
         </div>
 
@@ -181,11 +175,8 @@
           <br>
           <div class="info-card">
             <h4> Loratadina Jarabe</h4>
-            <p> Aplican Descuentos</p>
             <img src="./assets/img/estrellas.png" style="width: 150px;">
-            <p class="precio">$86.900<span class="u-pull-right">$17.800</span></p>
-            <a href="./catalogo.php" class="u-full-width button-primary button input agregar-carrito" data-id="1">Ver
-              mas</a>
+            <p>La Loratadina jarabe es un fármaco utilizado para el tratamiento de la alergia. Es un antihistamínico considerado de segunda generación por no provocar somnolencia</p>
           </div>
         </div>
 
@@ -194,11 +185,8 @@
           <img src="./assets/img/icom2.jpg" style="width: 290px;">
           <div class="info-card">
             <h4> Condon Dexex Sabores</h4>
-            <p> Aplican Descuentos</p>
             <img src="./assets/img/estrellas.png" style="width: 150px;">
-            <p class="precio">$86.900<span class="u-pull-right">$17.800</span></p>
-            <a href="./catalogo.php" class="u-full-width button-primary button input agregar-carrito" data-id="1">Ver
-              mas</a>
+            <p> El único método que puede prevenir el contagio de enfermedades de transmisión sexual es el preservativo, ya que se trata de un anticonceptivo de barrera que impide de fluidos durante el sexo.</p>
           </div>
         </div>
       </div>
@@ -209,11 +197,9 @@
           <br>
           <div class="info-card">
             <h4>Metronidazol 500mg</h4>
-            <p> Aplican Descuentos</p>
+            
             <img src="./assets/img/estrellas.png" style="width: 150px;">
-            <p class="precio">$12.000<span class="u-pull-right">$7.000</span></p>
-            <a href="./catalogo.php" class="u-full-width button-primary button input agregar-carrito" data-id="1">Ver
-              mas</a>
+            <p>El metronidazol es un antiparasitario del grupo de los nitroimidazoles. Inhibe la síntesis de los ácidos nucleicos y es utilizado para el tratamiento de las infecciones</p>
           </div>
         </div>
         <div class="card">
@@ -222,11 +208,9 @@
           <br>
           <div class="info-card">
             <h4> Metformina 500mg</h4>
-            <p> Aplican Descuentos</p>
+            
             <img src="./assets/img/estrellas.png" style="width: 150px;">
-            <p class="precio">$19.900<span class="u-pull-right">$1.500</span></p>
-            <a href="./catalogo.php" class="u-full-width button-primary button input agregar-carrito" data-id="1">Ver
-              mas</a>
+            <p>La metformina es una clase de medicamentos llamados biguanidas. La metformina ayuda a controlar la cantidad de glucosa en su sangre. Disminuye la cantidad de glucosa</p>
           </div>
         </div>
         <div class="card">
@@ -235,11 +219,9 @@
           <br>
           <div class="info-card">
             <h4>Loratadina Jarabe</h4>
-            <p> Aplican Descuentos</p>
+           
             <img src="./assets/img/estrellas.png" style="width: 150px;">
-            <p class="precio">$19.900<span class="u-pull-right">$1.500</span></p>
-            <a href="./catalogo.php" class="u-full-width button-primary button input agregar-carrito" data-id="1">Ver
-              mas</a>
+            <p>La Loratadina es un fármaco utilizado para el tratamiento de la alergia. Es un antihistamínico considerado de segunda generación por no provocar somnolencia</p>
           </div>
         </div>
       </div>

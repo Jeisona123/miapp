@@ -59,9 +59,6 @@ if (!empty($_POST)) {
         }
     }
 }
-
-
-
 include_once "includes/header.php";
 ?>
 
@@ -74,23 +71,29 @@ include_once "includes/header.php";
             <div class="card-body">
                 <form method="post">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <input type="hidden" id="idcliente" value="1" name="idcliente" required>
-                                <label>Nombre</label>
+                                <label class=" text-dark font-weight-bold">Nombre</label>
                                 <input type="text" name="nombre" id="nombre" class="form-control"
                                     placeholder="Ingrese nombre del cliente" required>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="form-group">
-                                <label>Teléfono</label>
+                                <label class=" text-dark font-weight-bold">Apellido</label>
+                                <input type="text" name="apellido" id="apellido" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class=" text-dark font-weight-bold">Teléfono</label>
                                 <input type="number" name="telefono" id="telefono" class="form-control" required>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="form-group">
-                                <label>Dirección</label>
+                                <label class=" text-dark font-weight-bold">Dirección</label>
                                 <input type="text" name="direccion" id="direccion" class="form-control" required>
                             </div>
                         </div>
@@ -106,7 +109,7 @@ include_once "includes/header.php";
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="form-group">
-                            <label for="producto">Código o Nombre</label>
+                            <label for="producto" class=" text-dark font-weight-bold">Código o Nombre</label>
                             <input id="producto" class="form-control" type="text" name="producto"
                                 placeholder="Ingresa el código o nombre">
                             <input id="id" type="hidden" name="id">
@@ -114,21 +117,21 @@ include_once "includes/header.php";
                     </div>
                     <div class="col-lg-2">
                         <div class="form-group">
-                            <label for="cantidad">Cantidad</label>
+                            <label for="cantidad" class=" text-dark font-weight-bold">Cantidad</label>
                             <input id="cantidad" class="form-control" type="text" name="cantidad" placeholder="Cantidad"
                                 onkeyup="calcularPrecio(event)">
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="form-group">
-                            <label for="precio">Precio</label>
+                            <label for="precio" class=" text-dark font-weight-bold">Precio</label>
                             <input id="precio" class="form-control" type="text" name="precio" placeholder="Precio"
                                 disabled>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="form-group">
-                            <label for="sub_total">Sub Total</label>
+                            <label for="sub_total" class=" text-dark font-weight-bold">Sub Total</label>
                             <input id="sub_total" class="form-control" type="text" name="sub_total"
                                 placeholder="Sub Total" disabled>
                         </div>

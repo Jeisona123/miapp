@@ -110,8 +110,8 @@ if (!empty($_POST)) {
         <div class="card-body">
         
             <form action="" method="post" autocomplete="off" id="formulario">
+            <h2 class="title">CREAR CUENTA </h2><br>
                 <?php echo isset($alert) ? $alert : ''; ?>
-                <h2 class="title">CREAR CUENTA </h2><br>
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
@@ -143,8 +143,8 @@ if (!empty($_POST)) {
                         </div>
                     </div>
                 </div><br>
-                <button class="botona" type="submit">Crear Cuenta</button>
-                <a class="otros" href="index.php">Ya tengo una cuenta</a>
+                <button class="botona" type="submit">REGISTRARSE</button><br>
+                <center><a class="otros" href="index.php">Ya tengo una cuenta</a></center>
             </form>
         </div>
     </div>

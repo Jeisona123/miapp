@@ -17,10 +17,12 @@ if (empty($_SESSION['active'])) {
     <link href="../assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link rel="stylesheet" href="../assets/js/jquery-ui/jquery-ui.min.css">
     <script src="../assets/js/all.min.js" crossorigin="anonymous"></script>
+
+    
 </head>
 
 <body>
-    <div class="wrapper ">
+  
         <div class="sidebar" data-color="purple" data-background-color="blue" data-image="../assets/img/drofondo.avif" style="backdrop-filter: blur(2px);">
             <div class="logo bg-primary"><a href="#" class="simple-text logo-normal" style="font-size: 22px;" >
                     DROMEDIC JC

@@ -50,14 +50,16 @@ input{
 }
 /*ESTILO BOTON INICIAR SESION*/
 .botona{
-    float: right;
+    
     background-color: rgb(16, 0, 236);
     padding: .5rem;
     color: rgb(255, 255, 255);
     border: none;
-    width: 40%;
+    width: 90%;
     border-radius: 5px;
-    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
 }
 .botona:hover{
     background-color: rgb(255, 238, 0);
@@ -65,12 +67,14 @@ input{
 }
 /*ESTILO ENLACE CREAR CUENTA*/
 .otro{
-    float: left;
+
     margin-left: 10px;
     padding: .5rem;
     text-decoration: none;
-    color: #101A55;
-    
+    color: #2d3877;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
 }
 .otro:hover{
     color: #ffffff;

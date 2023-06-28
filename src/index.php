@@ -108,7 +108,7 @@ include_once "includes/header.php";
                                     <td><?php echo $data['tipo']; ?></td>
                                     <td><?php echo $data['nombre']; ?></td>
                                     <td><?php echo $data['precio']; ?></td>
-                                    <td><?php echo $data['existencia']; ?></td>
+                                    <td><?php echo $data['cantidad']; ?></td>
                                     <td>
                                         <form action="eliminar_producto.php?id=<?php echo $data['codproducto']; ?>" method="post" class="confirmar d-inline">
                                             <button class="btn btn-danger" type="submit"><i class='fas fa-trash-alt'></i> </button>

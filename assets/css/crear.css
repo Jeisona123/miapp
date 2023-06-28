@@ -18,7 +18,7 @@ body{
 form{
     width: 500px;
     border: 2px solid #928392;
-    padding: 3rem;
+    padding: 30px 50px 79px 50px;
     background-color: #ffffff77;
     border: none;
     border-radius: 20px;
@@ -40,7 +40,6 @@ label{
     font-size: 18px;
     padding: 10px;
     font-weight: 300;
-    margin-left: 18px;
 }
 /*ESTILO CAMPO PARA DIGITAR*/
 input{
@@ -51,18 +50,19 @@ input{
     margin: 14px;
     border-radius: 10px;
     font-size: 14px;
-    margin-left: 18px;
 }
 /*ESTILO BOTON INICIAR SESION*/
 .botona{
-    float: right;
+    
     background-color: rgb(16, 0, 236);
     padding: .5rem;
     color: rgb(255, 255, 255);
     border: none;
-    width: 40%;
+    width: 90%;
     border-radius: 5px;
-    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
 }
 .botona:hover{
     background-color: rgb(255, 238, 0);
@@ -70,12 +70,15 @@ input{
 }
 /*ESTILO ENLACE CREAR CUENTA*/
 .otros{
-    float: left;
+
     margin-left: 10px;
     padding: .5rem;
     text-decoration: none;
     color: #101A55;
-    font-size: 14px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+
     
 }
 .otros:hover{

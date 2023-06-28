@@ -46,7 +46,7 @@ if (!empty($_POST)) {
                         </button>
                     </div>';
             } else {
-                $query_insert = mysqli_query($conexion, "INSERT INTO producto(codigo,descripcion,precio,existencia,id_lab,id_presentacion,id_tipo,fechahoy,vencimiento,reginv,nolote,dosis,funcion ) values ('$codigo', '$producto', '$precio', '$cantidad', $proveedor, $categoria, $tipo,'$fechahoy', '$vencimiento', '$reginv', '$nolote', '$dosis', '$funcion')");
+                $query_insert = mysqli_query($conexion, "INSERT INTO producto(codigo,descripcion,precio,cantidad,id_lab,id_presentacion,id_tipo,fechahoy,vencimiento,reginv,nolote,dosis,funcion ) values ('$codigo', '$producto', '$precio', '$cantidad', $proveedor, $categoria, $tipo,'$fechahoy', '$vencimiento', '$reginv', '$nolote', '$dosis', '$funcion')");
                 if ($query_insert) {
                     $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Producto registrado
@@ -61,7 +61,7 @@ if (!empty($_POST)) {
                 }
             }
         } else {
-            $query_update = mysqli_query($conexion, "UPDATE producto SET codigo = '$codigo', descripcion = '$producto', precio= $precio, existencia = $cantidad, fechahoy = '$fechahoy', vencimiento = '$vencimiento', reginv ='$reginv', nolote = '$nolote', dosis = '$dosis', funcion = '$funcion' WHERE codproducto = '" . mysqli_real_escape_string($conexion, $id) . "'");
+            $query_update = mysqli_query($conexion, "UPDATE producto SET codigo = '$codigo', descripcion = '$producto', precio= $precio, cantidad = $cantidad, fechahoy = '$fechahoy', vencimiento = '$vencimiento', reginv ='$reginv', nolote = '$nolote', dosis = '$dosis', funcion = '$funcion' WHERE codproducto = '" . mysqli_real_escape_string($conexion, $id) . "'");
             if ($query_update) {
                 $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Producto Modificado
@@ -285,7 +285,7 @@ include_once "includes/header.php";
                                         <?php echo $data['funcion']; ?>
                                     </td>
                                     <td>
-                                        <?php echo $data['existencia']; ?>
+                                        <?php echo $data['cantidad']; ?>
                                     </td>
                                     <td>
                                         <a href="#" onclick="editarProducto(<?php echo $data['codproducto']; ?>)"

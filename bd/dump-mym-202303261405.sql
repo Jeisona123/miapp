@@ -223,7 +223,7 @@
     `codigo` varchar(20) NOT NULL,
     `descripcion` varchar(200) NOT NULL,
     `precio` decimal(10,2) NOT NULL,
-    `existencia` int(11) NOT NULL,
+    `cantidad` int(11) NOT NULL,
     `id_lab` int(11) NOT NULL,
     `id_presentacion` int(11) NOT NULL,
     `id_tipo` int(11) NOT NULL,

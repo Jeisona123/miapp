@@ -166,6 +166,7 @@ li {
   margin: 0 auto;
   max-width: 1300px;
   padding: 10px;
+  text-align: justify;
 }
 
 .encabezado {
@@ -183,11 +184,12 @@ li {
 .four-columns {
   width: calc(30.33% - 10px);
   margin-bottom: 20px;
+  text-align: justify;
 }
 /*ESTILOS PARA LAS TARJETASSSS*/
 .card {
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: #f1f1f1c7;
   width: 80%;
   padding: 30px;
   border-radius: 5px;
@@ -207,9 +209,10 @@ li {
   margin-bottom: 10px;
 }
 
-.info-card p {
-  font-size: 14px;
+.row .four-columns .card .info-card p {
+  font-size: 15px;
   margin-bottom: 5px;
+  text-align: justify;
 }
 
 .info-card .precio {
@@ -269,6 +272,8 @@ li {
 .col-md p {
   text-align: justify;
   padding: 30px;
+  color: #000000;
+  font-size: 13px;
 }
 
 /*ESTILOS PARA EL FOOTER*/

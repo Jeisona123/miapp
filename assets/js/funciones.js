@@ -352,7 +352,7 @@ if (document.getElementById("stockMinimo")) {
                 var cantidad = [];
                 for (var i = 0; i < data.length; i++) {
                     nombre.push(data[i]['descripcion']);
-                    cantidad.push(data[i]['existencia']);
+                    cantidad.push(data[i]['cantidad']);
                 }
                 var ctx = document.getElementById("stockMinimo");
                 var myPieChart = new Chart(ctx, {
@@ -535,7 +535,7 @@ function editarProducto(id) {
             $('#presentacion').val(datos.id_presentacion);
             $('#laboratorio').val(datos.id_lab);
             $('#vencimiento').val(datos.vencimiento);
-            $('#cantidad').val(datos.existencia);
+            $('#cantidad').val(datos.cantidad);
             if (datos.vencimiento != '0000-00-00') {
                 $("#accion").prop("checked", true);
             }else{
