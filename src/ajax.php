@@ -8,6 +8,7 @@ if (isset($_GET['q'])) {
     while ($row = mysqli_fetch_assoc($cliente)) {
         $data['id'] = $row['idcliente'];
         $data['label'] = $row['nombre'];
+        $data['apellido'] = $row['apellido'];
         $data['direccion'] = $row['direccion'];
         $data['telefono'] = $row['telefono'];
         array_push($datos, $data);

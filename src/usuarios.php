@@ -85,6 +85,9 @@ include "includes/header.php";
 ?>
 <div class="card">
     <div class="card-body">
+    <center><div class="card-header bg-primary text-white">
+                       REGISTRO DE USUARIOS
+                    </div></center><br>
         <form action="" method="post" autocomplete="off" id="formulario">
             <?php echo isset($alert) ? $alert : ''; ?>
             <div class="row">

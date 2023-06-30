@@ -76,6 +76,9 @@ include_once "includes/header.php";
 ?>
 <div class="card">
     <div class="card-body">
+    <center><div class="card-header bg-primary text-white">
+                        REGISTRO DE CATEGORIA
+                    </div></center><br>
         <div class="row">
             <div class="col-md-12">
                 <?php echo (isset($alert)) ? $alert : ''; ?>
@@ -90,7 +93,7 @@ include_once "includes/header.php";
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="nombre" class="text-dark font-weight-bold">Nombre Corto</label>
+                                <label for="nombre" class="text-dark font-weight-bold">Presentacion</label>
                                 <input type="text" placeholder="Ingrese Nombre Corto" name="nombre_corto" id="nombre_corto" class="form-control">
                             </div>
                         </div>
@@ -108,7 +111,7 @@ include_once "includes/header.php";
                             <tr>
                                 <th>#</th>
                                 <th>Nombre</th>
-                                <th>Nombre Corto</th>
+                                <th>Presentacion</th>
                                 <th></th>
                             </tr>
                         </thead>

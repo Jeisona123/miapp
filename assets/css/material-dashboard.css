@@ -42,8 +42,8 @@ body {
   margin: 0;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
+  font-weight: 90%;
+  line-height: 1.5rem;
   color: #212529;
   text-align: left;
   background-color: #fafafa;
@@ -463,8 +463,8 @@ body {
   margin: 0;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
+  font-weight: 90%;
+  line-height: 1.5rem;
   color: #212529;
   text-align: left;
   background-color: #fafafa;
@@ -1022,7 +1022,7 @@ pre code {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: -15px;
+  margin-left: -1px;
 }
 
 .no-gutters {
@@ -1109,8 +1109,8 @@ pre code {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .col {
@@ -2208,7 +2208,7 @@ pre code {
 
 .table .thead-dark th {
   color: #fafafa;
-  background-color: #212529;
+  background-color: #1c1e29;
   border-color: #32383e;
 }
 
@@ -2928,15 +2928,15 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: #ffffff;
-  background-color: #4caf50;
-  border-color: #4caf50;
+  background-color: #FFDB58;
+  border-color: #ffc802;
   box-shadow: none;
 }
 
 .btn-success:hover {
   color: #ffffff;
-  background-color: #409444;
-  border-color: #3d8b40;
+  background-color: #FFDB58;
+  border-color: #ffc802;
 }
 
 .btn-success:focus,
@@ -2947,16 +2947,16 @@ fieldset:disabled a.btn {
 .btn-success.disabled,
 .btn-success:disabled {
   color: #ffffff;
-  background-color: #4caf50;
-  border-color: #4caf50;
+  background-color: #FFDB58;
+  border-color: #ffc802;
 }
 
 .btn-success:not(:disabled):not(.disabled):active,
 .btn-success:not(:disabled):not(.disabled).active,
 .show>.btn-success.dropdown-toggle {
   color: #ffffff;
-  background-color: #3d8b40;
-  border-color: #39833c;
+  background-color: #FFDB58;
+  border-color: #ffc802;
 }
 
 .btn-success:not(:disabled):not(.disabled):active:focus,
@@ -3045,8 +3045,8 @@ fieldset:disabled a.btn {
 
 .btn-danger {
   color: #ffffff;
-  background-color: #f44336;
-  border-color: #f44336;
+  background-color: #ff2b1c;
+  border-color: #ff1100;
   box-shadow: none;
 }
 
@@ -4253,7 +4253,7 @@ tbody.collapse.show {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .nav-link:hover,
@@ -4262,7 +4262,7 @@ tbody.collapse.show {
 }
 
 .nav-link.disabled {
-  color: #6c757d;
+  color: #0088ff;
 }
 
 .nav-tabs {
@@ -4813,7 +4813,7 @@ tbody.collapse.show {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1.25rem;
+  padding: 2.25rem;
 }
 
 .card-title {
@@ -5251,7 +5251,7 @@ tbody.collapse.show {
 }
 
 .alert-warning {
-  color: #857a1f;
+  color: #ffe600;
   background-color: #fffbd8;
   border-color: #fff9c8;
 }
@@ -9449,14 +9449,14 @@ a.text-dark:focus {
 
 .btn.btn-primary {
   color: #fff;
-  background-color: #9c27b0;
+  background-color: #008000;
   border-color: #9c27b0;
   box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
 }
 
 .btn.btn-primary:hover {
   color: #fff;
-  background-color: #9124a3;
+  background-color: #008000;
   border-color: #701c7e;
 }
 
@@ -9464,7 +9464,7 @@ a.text-dark:focus {
 .btn.btn-primary.focus,
 .btn.btn-primary:hover {
   color: #fff;
-  background-color: #9124a3;
+  background-color: #008000;
   border-color: #701c7e;
 }
 
@@ -9473,7 +9473,7 @@ a.text-dark:focus {
 .open>.btn.btn-primary.dropdown-toggle,
 .show>.btn.btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #9124a3;
+  background-color: #9c27b1;
   border-color: #701c7e;
   box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
 }
@@ -9491,7 +9491,7 @@ a.text-dark:focus {
 .show>.btn.btn-primary.dropdown-toggle:focus,
 .show>.btn.btn-primary.dropdown-toggle.focus {
   color: #fff;
-  background-color: #9124a3;
+  background-color: #9c27b1;
   border-color: #3f1048;
 }
 
@@ -9501,7 +9501,7 @@ a.text-dark:focus {
 }
 
 .open>.btn.btn-primary.dropdown-toggle.bmd-btn-icon:hover {
-  background-color: #9124a3;
+  background-color: #9c27b1;
 }
 
 .btn.btn-primary.disabled:focus,
@@ -9539,14 +9539,14 @@ a.text-dark:focus {
 
 .btn.btn-secondary {
   color: #333333;
-  background-color: #fafafa;
+  background-color: #9c27b1;
   border-color: #ccc;
   box-shadow: 0 2px 2px 0 rgba(250, 250, 250, 0.14), 0 3px 1px -2px rgba(250, 250, 250, 0.2), 0 1px 5px 0 rgba(250, 250, 250, 0.12);
 }
 
 .btn.btn-secondary:hover {
   color: #333333;
-  background-color: #f2f2f2;
+  background-color: #9c27b1;
   border-color: #adadad;
 }
 
@@ -9554,7 +9554,7 @@ a.text-dark:focus {
 .btn.btn-secondary.focus,
 .btn.btn-secondary:hover {
   color: #333333;
-  background-color: #f2f2f2;
+  background-color: #9c27b1;
   border-color: #adadad;
 }
 
@@ -9719,14 +9719,14 @@ a.text-dark:focus {
 
 .btn.btn-success {
   color: #fff;
-  background-color: #4caf50;
+  background-color: #862FC4;
   border-color: #4caf50;
   box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
 }
 
 .btn.btn-success:hover {
   color: #fff;
-  background-color: #47a44b;
+  background-color: #862FC4;
   border-color: #39843c;
 }
 
@@ -9734,7 +9734,7 @@ a.text-dark:focus {
 .btn.btn-success.focus,
 .btn.btn-success:hover {
   color: #fff;
-  background-color: #47a44b;
+  background-color: #862FC4;
   border-color: #39843c;
 }
 
@@ -9899,8 +9899,8 @@ a.text-dark:focus {
 
 .btn.btn-danger {
   color: #fff;
-  background-color: #f44336;
-  border-color: #f44336;
+  background-color: #ff2b1c;
+  border-color: #ff1100;
   box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12);
 }
 
@@ -13725,8 +13725,8 @@ fieldset[disabled] .form-group .form-control {
 
 .navbar .navbar-nav .nav-item .nav-link {
   position: relative;
-  color: inherit;
-  padding: 0.9375rem;
+  color: #18ce0f;
+  padding: 15px;
   font-weight: 400;
   font-size: 12px;
   text-transform: uppercase;
@@ -13734,9 +13734,9 @@ fieldset[disabled] .form-group .form-control {
   line-height: 20px;
 }
 
-.navbar .navbar-nav .nav-item .nav-link:not(.btn-just-icon) .fa {
+.navbar .navbar-nav class="svg-inline--fa fa-user fa-w-14":not(.btn-just-icon) .fa {
   position: relative;
-  top: 2px;
+  top: 8px;
   margin-top: -4px;
   margin-right: 4px;
 }
@@ -13811,7 +13811,7 @@ fieldset[disabled] .form-group .form-control {
 .navbar.navbar-absolute {
   position: absolute;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 2px;
   z-index: 1029;
 }
 
@@ -14105,7 +14105,7 @@ fieldset[disabled] .form-group .form-control {
 }
 
 .alert.alert-warning {
-  background-color: yellow;
+  background-color: #D3D3D3;
   color: #000;
 }
 
@@ -14115,8 +14115,8 @@ fieldset[disabled] .form-group .form-control {
 }
 
 .alert.alert-danger {
-  background-color: #f55145;
-  color: #ffffff;
+  background-color: #D3D3D3;
+  color: #000;
 }
 
 .alert.alert-danger a,
@@ -15580,7 +15580,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .main-panel {
   position: relative;
   float: right;
-  width: calc(100% - 260px);
+  width: 100%;
   transition: 0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1);
 }
 
@@ -17186,7 +17186,7 @@ html[dir="rtl"] .card.card-chart .card-category {
   text-align: right;
 }
 
-html[dir="rtl"] .card .card-body,
+html[dir="rtl"] .card .,
 html[dir="rtl"] .card .card-footer {
   direction: rtl;
 }
@@ -17419,7 +17419,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 
 .card .card-body,
 .card .card-footer {
-  padding: 0.9375rem 1.875rem;
+  padding: 2.9375rem 2.875rem;
 }
 
 .card .card-body+.card-footer {
@@ -17723,7 +17723,7 @@ html[dir="rtl"] .form-check .form-check-sign .check:before {
 }
 
 .card .card-body {
-  padding: 0.9375rem 20px;
+  padding: 1.2295rem 30px;
   position: relative;
 }
 
@@ -18933,6 +18933,7 @@ Copyright (c) 2015 Daniel Eden
   html,
   body {
     overflow-x: hidden;
+    width: 90%;
   }
 
   .nav-open .menu-on-left .main-panel,
@@ -19083,6 +19084,7 @@ Copyright (c) 2015 Daniel Eden
 
   body {
     position: relative;
+    width: 90%;
   }
 
   .nav-open .main-panel,

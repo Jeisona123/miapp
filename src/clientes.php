@@ -11,7 +11,7 @@ if (empty($existe) && $id_user != 1) {
 
 if (!empty($_POST)) {
     $alert = "";
-    if (empty($_POST['nombre']) || empty($_POST['telefono']) || empty($_POST['direccion'])) {
+    if (empty($_POST['nombre']) || empty($_POST['apellido']) || empty($_POST['telefono']) || empty($_POST['direccion'])) {
         $alert = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
                         Todo los campos son obligatorio
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -38,7 +38,7 @@ if (!empty($_POST)) {
                         </button>
                     </div>';
             } else {
-                $query_insert = mysqli_query($conexion, "INSERT INTO cliente(nombre,telefono,direccion,apellido) values ('$nombre', '$apellido, '$telefono', '$direccion')");
+                $query_insert = mysqli_query($conexion, "INSERT INTO cliente(nombre,apellido,telefono,direccion) values ('$nombre', '$apellido', '$telefono', '$direccion')");
                 if ($query_insert) {
                     $alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Cliente registrado
@@ -80,6 +80,9 @@ include_once "includes/header.php";
 ?>
 <div class="card">
     <div class="card-body">
+    <center><div class="card-header bg-primary text-white">
+                        REGISTRO CLIENTES
+                    </div></center><br>
         <div class="row">
             <div class="col-md-12">
                 <?php echo (isset($alert)) ? $alert : '' ; ?>

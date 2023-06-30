@@ -12,10 +12,11 @@ $query = mysqli_query($conexion, "SELECT v.*, c.idcliente, c.nombre FROM ventas 
 include_once "includes/header.php";
 ?>
 <div class="card">
-    <div class="card-header">
-        Historial ventas
-    </div>
+    
     <div class="card-body">
+    <center><div class="card-header bg-primary text-white">
+                        HISTORIAL DE VENTAS
+                    </div></center><br>
         <div class="table-responsive">
             <table class="table table-light" id="tbl">
                 <thead class="thead-dark">

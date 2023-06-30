@@ -1,0 +1,52 @@
+
+  
+  /*ESTILOS PARA TODA LA BARRA DE NAVEGACION*/
+  .container1a {
+    width: 100%;
+    height: 22vh;
+    color: #ffffff;
+    background-color: #101a55;
+  }
+  
+  /*ESTILOS PARA TODA LA BARRA DE NAVEGACION*/
+  .navbar1a {
+    width: 90%;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /*ESTILOS PARA CADA UNO DE LOS ENLACES DE LA BARRA DE NAVEGACION*/
+  .navbar1a .uls .lis {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  /*ESTILOS PARA LOS ENLACES ANIMACION*/
+  .navbar1a .uls .lis::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out;
+  }
+  
+  .navbar1a .uls .lis:hover::before {
+    width: 100%;
+  }
+  
+  /*ESTILOS PARA DAR ESTILO A LETRA (ENLACES DE NAVEGACION)*/
+  .navbar1a .uls .lis .as {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: roboto, "sans-serif";
+    font-size: 1rem;
+  }
+  

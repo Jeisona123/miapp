@@ -75,6 +75,9 @@ include_once "includes/header.php";
 ?>
 <div class="card">
     <div class="card-body">
+    <center><div class="card-header bg-primary text-white">
+                        REGISTRO DE LABORATORIOS
+                    </div></center><br>
         <div class="row">
             <div class="col-md-12">
                 <?php echo (isset($alert)) ? $alert : ''; ?>

@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         select: function (event, ui) {
             $("#idcliente").val(ui.item.id);
             $("#nom_cliente").val(ui.item.label);
+            $("#apel_cliente").val(ui.item.apellido);
             $("#tel_cliente").val(ui.item.telefono);
             $("#dir_cliente").val(ui.item.direccion);
         }
@@ -478,6 +479,7 @@ function editarCliente(id) {
         success: function (response) {
             const datos = JSON.parse(response);
             $('#nombre').val(datos.nombre);
+            $('#apellido').val(datos.apellido);
             $('#telefono').val(datos.telefono);
             $('#direccion').val(datos.direccion);
             $('#id').val(datos.idcliente);

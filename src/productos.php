@@ -87,9 +87,9 @@ include_once "includes/header.php";
         <div class="row">
             <div class="col-md-12">
                 <div class="card shadow-lg">
-                    <div class="card-header bg-primary text-white">
-                        Lista de Productos
-                    </div>
+                <center><div class="card-header bg-primary text-white">
+                        REGISTRO DE PRODUCTOS
+                    </div></center><br>
                     <div class="card-body">
                         <form action="" method="post" autocomplete="off" id="formulario">
                             <?php echo isset($alert) ? $alert : ''; ?>
